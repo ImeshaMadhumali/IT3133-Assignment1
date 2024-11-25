@@ -14,10 +14,12 @@ const List = () => {
 
     return (
         <div>
-            <h2>{sculptureList[index].name}</h2>
-            <button onClick={previousSculpture}>Previous</button>
-            <button onClick={nextSculpture}>Next</button>
-        </div>
+        <h2>{sculptureList[index].name}</h2>
+        <p><strong>Artist:</strong> {sculptureList[index].artist}</p>
+        <p>{sculptureList[index].description}</p>
+        <button onClick={previousSculpture}>Previous</button>
+        <button onClick={nextSculpture}>Next</button>
+    </div>
     );
 };
 
