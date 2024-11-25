@@ -18,6 +18,7 @@ App will run on the port:  http://localhost:3000
 
 Here is the output for both light and dark themes.
 
-![Screenshot (1187)](https://github.com/user-attachments/assets/afcd13ae-04e4-4271-bf87-32ec4e12328e)
-![Screenshot (1186)](https://github.com/user-attachments/assets/bf41920b-a95d-424b-962f-b873736b0da1)
+![Screenshot (1187)](https://github.com/user-attachments/assets/f72d1d90-dd54-4ee8-83e0-d25f0461e068)
+![Screenshot (1186)](https://github.com/user-attachments/assets/6eadcb52-97c4-4850-887b-e31a1a812a44)
+
 
