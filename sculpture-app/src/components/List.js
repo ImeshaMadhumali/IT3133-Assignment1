@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { sculptureList } from '../data/data';
+import { Button, ButtonGroup, Container, Row, Col } from 'react-bootstrap';
 
 const List = () => {
     const [index, setIndex] = useState(0);
@@ -13,18 +14,36 @@ const List = () => {
     };
 
     return (
-        <div>
-        <h2>{sculptureList[index].name}</h2>
-        <img
-            src={sculptureList[index].url}
-            alt={sculptureList[index].alt}
-            style={{ width: '300px', borderRadius: '8px' }}
-        />
-        <p><strong>Artist:</strong> {sculptureList[index].artist}</p>
-        <p>{sculptureList[index].description}</p>
-        <button onClick={previousSculpture}>Previous</button>
-        <button onClick={nextSculpture}>Next</button>
-    </div>
+        <Container className="mt-4">
+        <Row>
+            <Col>
+                <h2>{sculptureList[index].name}</h2>
+            </Col>
+        </Row>
+        <Row>
+            <Col md={4}>
+                <img
+                    src={sculptureList[index].url}
+                    alt={sculptureList[index].alt}
+                    className="img-fluid rounded"
+                />
+            </Col>
+            <Col md={8}>
+                <p><strong>Artist:</strong> {sculptureList[index].artist}</p>
+                <p>{sculptureList[index].description}</p>
+            </Col>
+        </Row>
+        <Row className="mt-3">
+            <Col className="text-center">
+                <ButtonGroup>
+                    <Button onClick={previousSculpture}>Previous</Button>
+                    <Button onClick={() => setIndex(0)}>First</Button>
+                    <Button onClick={() => setIndex(sculptureList.length - 1)}>Last</Button>
+                    <Button onClick={nextSculpture}>Next</Button>
+                </ButtonGroup>
+            </Col>
+        </Row>
+    </Container>
     );
 };
 
