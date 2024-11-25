@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Form } from 'react-bootstrap';
 
 const Theme = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -12,11 +13,13 @@ const Theme = () => {
     }, [isDarkMode]);
 
     return (
-        <div>
-            <button onClick={toggleTheme}>
-                {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            </button>
-        </div>
+        <Form.Check
+        type="switch"
+        id="theme-switch"
+        label={isDarkMode ? 'Dark Mode' : 'Light Mode'}
+        checked={isDarkMode}
+        onChange={toggleTheme}
+    />
     );
 };
 

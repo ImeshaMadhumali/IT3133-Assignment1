@@ -18,6 +18,15 @@ body.dark-mode {
   color: #ffffff;
 }
 
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 
 .App-logo {
   height: 40vmin;
