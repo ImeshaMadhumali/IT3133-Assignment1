@@ -34,25 +34,21 @@ const List = () => {
                     <Theme />
                 </Col>
             </Row>
-
-            {/* Sculpture Image and Details */}
-            <Row className="justify-content-center">
-                {/* Image Section */}
-                <Col md={4} className="text-center mb-3">
-                    <img
-                        src={sculptureList[index].url}
-                        alt={sculptureList[index].alt}
-                        className="img-fluid rounded"
-                    />
-                </Col>
-
-                {/* Details Section */}
-                <Col md={8}>
+    
+            {/* Sculpture Image and Details in a Flexbox Container */}
+            <div className="sculpture-container">
+                <img
+                    src={sculptureList[index].url}
+                    alt={sculptureList[index].alt}
+                    className="img-fluid"
+                />
+                <div className="sculpture-details">
+                    <h3>About the Artist</h3>
                     <p><strong>Artist:</strong> {sculptureList[index].artist}</p>
                     <p>{sculptureList[index].description}</p>
-                </Col>
-            </Row>
-
+                </div>
+            </div>
+    
             {/* Navigation Buttons */}
             <Row className="mt-3">
                 <Col className="text-center">
@@ -74,6 +70,7 @@ const List = () => {
             </Row>
         </Container>
     );
+    
 };
 
 export default List;

@@ -32,7 +32,25 @@ img {
   height: auto;
 }
 
+.sculpture-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px 0;
+}
 
+.sculpture-details {
+  text-align: left;
+}
+
+.sculpture-details h3 {
+  margin-bottom: 15px;
+  color: #6c757d; /* Optional: Bootstrap muted text color */
+}
+
+.sculpture-details p {
+  margin-bottom: 10px;
+}
 
 .App-logo {
   height: 40vmin;
