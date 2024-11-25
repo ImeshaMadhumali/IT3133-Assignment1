@@ -27,6 +27,12 @@ body.dark-mode {
   right: 20px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 
 .App-logo {
   height: 40vmin;
