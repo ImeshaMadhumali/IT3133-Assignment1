@@ -15,6 +15,11 @@ const List = () => {
     return (
         <div>
         <h2>{sculptureList[index].name}</h2>
+        <img
+            src={sculptureList[index].url}
+            alt={sculptureList[index].alt}
+            style={{ width: '300px', borderRadius: '8px' }}
+        />
         <p><strong>Artist:</strong> {sculptureList[index].artist}</p>
         <p>{sculptureList[index].description}</p>
         <button onClick={previousSculpture}>Previous</button>
